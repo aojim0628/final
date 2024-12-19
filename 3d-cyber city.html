@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Aojim's Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt=""></a>
+            <ul class="nav-botton">
+                <li class="li-text"><a href="./index.html">Home</a></li>
+                <li class="li-text"><a href="./about.html">About</a></li>
+                <li class="li-text"><a href="./works.html">Works</a></li>
+            </ul>
+            <div class="social">
+                <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                        alt=""></a>
+                <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                        alt=""></a>
+            </div>
+            <img class="menu" onclick="showSidebar()" src="./images/menu.png" alt="">
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./works.html">Works</a></li>
+                <img class="X_btn" onclick="hideSidebar()" src="./images/X.png" alt="">
+            </ul>
+            </div>
+
+        <div class="d-banner">
+            <img class="d-banner1" src="./images/cyber.png" alt="">
+        </div>
+
+        <div class="ruin">
+            <div class="ruin-title">
+                <h1>Cyber City</h1>
+            </div>
+            <div class="ruin-intro">
+                <p>一張Cyber風格的城市圖會呈現高樓林立、霓虹燈閃爍的夜景，伴隨著科技感十足的廣告牌和工業化管道，營造出未來感與神秘壓迫的氛圍。</p>
+            </div>
+            <h1 class="midtitle">The Idea</h1>
+            <div class="challenge">
+                <div class="challenge1">
+                    <div class="challenge-title1"></div>
+                    <div class="challenge-text">一座Cyber風格的未來城市，夜幕降臨，滿眼是閃爍的霓虹燈和高聳入雲的摩天大樓，彷彿置身於流動的霓虹海洋中。有些人配戴機械義肢，成為人機融合的象徵。投影廣告在各處閃爍，為城市增添動態生命力。在這裡，科技和生活融為一體，但城市的繁華背後，卻隱隱透出些許神秘和孤寂。
+                    </div>
+                </div>
+            </div>
+            <h1 class="midtitle-other3d">Other 3D Modeling Works</h1>
+            <div class="work-pic">
+                <a class="work-pic-2" href="./3d-ruin.html"><img src="./images/card-ruin.png" alt=""></a>
+                <a class="work-pic-2" href="./3d-sci base.html"><img src="./images/card-sci base.png" alt=""></a>
+            </div>
+
+            <div class="back"><a href="./works.html">Back to Works</a></div>
+        </div>
+    </div>
+    
+
+
+
+    <div class="footer">
+        <p>made by aojim 2024</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                    alt=""></a>
+            <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                    alt=""></a>
+        </div>
+    </div>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

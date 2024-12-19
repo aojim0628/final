@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Aojim's Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt=""></a>
+            <ul class="nav-botton">
+                <li class="li-text"><a href="./index.html">Home</a></li>
+                <li class="li-text"><a href="./about.html">About</a></li>
+                <li class="li-text"><a href="./works.html">Works</a></li>
+            </ul>
+            <div class="social">
+                <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                        alt=""></a>
+                <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                        alt=""></a>
+            </div>
+            <img class="menu" onclick="showSidebar()" src="./images/menu.png" alt="">
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./works.html">Works</a></li>
+                <img class="X_btn" onclick="hideSidebar()" src="./images/X.png" alt="">
+            </ul>
+            </div>
+
+        <h1 class="midtitle">3D Modeling</h1>
+
+        <div class="work-pic">
+            <a class="work-pic-1" href="./3d-ruin.html"><img src="./images/card-ruin.png" alt=""></a>
+            <a class="work-pic-1" href="./3d-sci base.html"><img src="./images/card-sci base.png" alt=""></a>
+            <!-- <a class="work-pic-2" href=""><img src="./images/hospital.png" alt=""></a> -->
+            <a class="work-pic-1" href="./3d-cyber city.html"><img src="./images/card-cyber city.png" alt=""></a>
+        </div>
+
+        <h1 class="midtitle">UI/ UX</h1>
+
+        <div class="work-pic">
+            <a class="work-pic-1" href="./ui-beauty.html"><img src="./images/card-beauty.png" alt=""></a>
+            <a class="work-pic-1" href="./ui-hey.html"><img src="./images/card-Hey! Secretary.png" alt=""></a>
+            <a class="work-pic-1" href="./ui-musound.html"><img src="./images/card-musound.png" alt=""></a>
+        </div>
+
+        <!-- <h1 class="midtitle">Grpgic Design</h1>
+
+        <div class="work-pic">
+            <a class="work-pic-1" href=""><img src="./images/card-Coffee House.png" alt=""></a>
+            <a class="work-pic-2" href="./works.html"><img src="./images/card-Meow.png" alt=""></a>
+            <a class="work-pic-2" href=""><img src="./images/card-T-finding.png" alt=""></a>
+        </div> -->
+    </div>
+
+    <div class="footer">
+        <p>made by aojim 2024</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                    alt=""></a>
+            <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                    alt=""></a>
+        </div>
+    </div>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+</body>
+
+</html>

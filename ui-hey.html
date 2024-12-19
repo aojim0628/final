@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Aojim's Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt=""></a>
+            <ul class="nav-botton">
+                <li class="li-text"><a href="./index.html">Home</a></li>
+                <li class="li-text"><a href="./about.html">About</a></li>
+                <li class="li-text"><a href="./works.html">Works</a></li>
+            </ul>
+            <div class="social">
+                <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                        alt=""></a>
+                <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                        alt=""></a>
+            </div>
+            <img class="menu" onclick="showSidebar()" src="./images/menu.png" alt="">
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./works.html">Works</a></li>
+                <img class="X_btn" onclick="hideSidebar()" src="./images/X.png" alt="">
+            </ul>
+            </div>
+
+        <div class="ui-banner">
+            <img class="ui-banner1" src="./images/hey.png" alt="">
+        </div>
+
+        <div class="hey">
+            <div class="hey-title">
+                <h1>Hey! Secretary</h1>
+            </div>
+            <div class="hey-intro">
+                <p>Hey! Secretary 是一款改進學校APP的專案，從問卷收集、到使用者旅途、服務藍圖等
+                     都體現了我們對此專案的熱忱，同時也可望改進學校的APP。</p>
+
+                <p>最大的問題即是排版不好看，使人看起來有種複雜感，資訊錯綜複雜又沒有好的排版實在可惜
+                    ，因此我們針對以上痛點進行改進。</p>
+            </div>
+            <h1 class="midtitle">Challenges</h1>
+            <div class="challenge">
+                <div class="challenge1">
+                    <div class="challenge-title1">資訊太過雜亂</div>
+                    <div class="challenge-text1">● 資訊複雜不知從何找所需資源
+                        <br> ● 排版沒有很好的UX體驗
+                    </div>
+                </div>
+                <div class="challenge2">
+                    <div class="challenge-title2">解決問題的辦法</div>
+                    <div class="challenge-text2">透過減少頁面的顏色來達到簡潔的效果，並設置多項下拉選單，
+                        以便好找所需資料，也新增了交作業功能。</div>
+                </div>
+                <div class="challenge3">
+                    <div class="challenge-title3">效果</div>
+                    <div class="challenge-text3">所需資料能夠快速被找到，且使用APP 人數變多 交作業率變高。</div>
+                </div>
+            </div>
+        </div>
+            <h1 class="midtitle">Prototype</h1>
+        <div  class="beauty-gif">
+            <img src="./images/hey.gif" alt="">
+        </div>
+        <h1 class="midtitle">Other UI/UX Works</h1>
+        <div class="work-pic">
+            <a class="work-pic-2" href="./ui-beauty.html"><img src="./images/card-beauty.png" alt=""></a>
+            <a class="work-pic-2" href="./ui-musound.html"><img src="./images/card-musound.png" alt=""></a>
+        </div>
+
+        <div class="back"><a href="./works.html">Back to Works</a></div>
+        </div>
+    
+
+
+
+        <div class="footer">
+            <p>made by aojim 2024</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                        alt=""></a>
+                <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                        alt=""></a>
+            </div>
+        </div>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

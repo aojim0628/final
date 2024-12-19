@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Aojim's Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt=""></a>
+            <ul class="nav-botton">
+                <li class="li-text"><a href="./index.html">Home</a></li>
+                <li class="li-text"><a href="./about.html">About</a></li>
+                <li class="li-text"><a href="./works.html">Works</a></li>
+            </ul>
+            <div class="social">
+                <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                        alt=""></a>
+                <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                        alt=""></a>
+            </div>
+            <img class="menu" onclick="showSidebar()" src="./images/menu.png" alt="">
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./works.html">Works</a></li>
+                <img class="X_btn" onclick="hideSidebar()" src="./images/X.png" alt="">
+            </ul>
+            </div>
+
+        <div class="ui-banner">
+            <img class="ui-banner1" src="./images/beauty.png" alt="">
+        </div>
+
+        <div class="beauty">
+            <div class="beauty-title">
+                <h1>Beauty</h1>
+            </div>
+            <div class="beauty-intro">
+                <p>Beauty 是一款依照生活經驗選用了社交、購物兩款最常使用的軟體類型進行合併的APP，
+                    以女性為主要受眾。在本APP 內可以看到他人分享的心情貼文與穿搭照片，除了能按讚留
+                    言等基本功能之外，同時，也能瀏覽貼文中之衣物與其價格，並直接導出至購買網頁。</p>
+
+                <p>除了能省去了慢慢回覆訊息的時間，同時也可以創造不斐的商業價值，大大降低自媒體
+                    創業的門檻，亦可吸引同溫層來大大提升使用APP 之人數。</p>
+            </div>
+            <h1 class="midtitle">Challenges</h1>
+            <div class="challenge">
+                <div class="challenge1">
+                    <div class="challenge-title1">用戶的困擾</div>
+                    <div class="challenge-text1">● IG連結無法直接點擊導出
+                        <br> ● 貼文留言太多沒看到問題
+                    </div>
+                </div>
+                <div class="challenge2">
+                    <div class="challenge-title2">解決問題的辦法</div>
+                    <div class="challenge-text2">透過放入各項單品的連結來解決問題沒有被回覆、以及沒有超連
+                        結不能導出的問題，同時能創造新的經濟價值。</div>
+                </div>
+                <div class="challenge3">
+                    <div class="challenge-title3">效果</div>
+                    <div class="challenge-text3">外部商品能夠快速被瀏覽，減少中間溝通或是沒有被回覆到的問題，
+                        能帶動自媒體營銷的商機。</div>
+                </div>
+            </div>
+
+            <h1 class="midtitle">Prototype</h1>
+        </div>
+        <div  class="beauty-gif">
+            <img src="./images/beauty.gif" alt="">
+        </div>
+        <h1 class="midtitle">Other UI/UX Works</h1>
+        <div class="work-pic">
+            <a class="work-pic-2" href="./ui-hey.html"><img src="./images/card-Hey! Secretary.png" alt=""></a>
+            <a class="work-pic-2" href="./ui-musound.html"><img src="./images/card-musound.png" alt=""></a>
+        </div>
+
+        <div class="back"><a href="./works.html">Back to Works</a></div>
+    </div>
+    
+
+
+
+    <div class="footer">
+        <p>made by aojim 2024</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                    alt=""></a>
+            <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                    alt=""></a>
+        </div>
+    </div>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

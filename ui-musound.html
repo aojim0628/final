@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Aojim's Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt=""></a>
+            <ul class="nav-botton">
+                <li class="li-text"><a href="./index.html">Home</a></li>
+                <li class="li-text"><a href="./about.html">About</a></li>
+                <li class="li-text"><a href="./works.html">Works</a></li>
+            </ul>
+            <div class="social">
+                <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                        alt=""></a>
+                <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                        alt=""></a>
+            </div>
+            <img class="menu" onclick="showSidebar()" src="./images/menu.png" alt="">
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./works.html">Works</a></li>
+                <img class="X_btn" onclick="hideSidebar()" src="./images/X.png" alt="">
+            </ul>
+            </div>
+
+        <div class="ui-banner">
+            <img class="ui-banner1" src="./images/musound 14.png" alt="">
+        </div>
+
+        <div class="musound">
+            <div class="musound-title">
+                <h1>Musound</h1>
+            </div>
+            <div class="musound-intro">
+                <p>Musound 是一款與其他音樂APP 風格不同的軟體，基於用戶的情緒、時間、地點提供音樂推薦。
+                    例如，根據用戶的活動或環境音頻提供對應音樂。</p>
+
+                <p>虛擬DJ模式可以讓用戶自己設計播放列表順序，添加一些過場效果，讓用戶感受到自己就是一個DJ
+                    ，甚至能分享他們的"DJ集"給朋友。</p>
+            </div>
+            <h1 class="midtitle">Challenges</h1>
+            <div class="challenge">
+                <div class="challenge1">
+                    <div class="challenge-title1">無法客製化音樂風格</div>
+                    <div class="challenge-text1">● 推薦給我的音樂不符合我現在想要的
+                        <br> ● 好像少了點甚麼想自己加
+                    </div>
+                </div>
+                <div class="challenge2">
+                    <div class="challenge-title2">解決問題的辦法</div>
+                    <div class="challenge-text2">能夠偵測用戶目前位置與環境，推薦相應的音樂，還能讓用戶
+                        自行訂製過場音效等。</div>
+                </div>
+                <div class="challenge3">
+                    <div class="challenge-title3">效果</div>
+                    <div class="challenge-text3">增加用戶黏著度與參與度與增加平台獨特性，建立品牌忠誠度。</div>
+                </div>
+            </div>
+
+            <h1 class="midtitle">Prototype</h1>
+        </div>
+        <div  class="beauty-gif">
+            <img src="./images/musound.gif" alt="">
+        </div>
+        <h1 class="midtitle">Other UI/UX Works</h1>
+        <div class="work-pic">
+            <a class="work-pic-2" href="./ui-beauty.html"><img src="./images/card-beauty.png" alt=""></a>
+            <a class="work-pic-2" href="./ui-hey.html"><img src="./images/card-Hey! Secretary.png" alt=""></a>
+        </div>
+        <div class="back"><a href="./works.html">Back to Works</a></div>
+    </div>
+    
+
+
+
+    <div class="footer">
+        <p>made by aojim 2024</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                    alt=""></a>
+            <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                    alt=""></a>
+        </div>
+    </div>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

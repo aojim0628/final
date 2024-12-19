@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Aojim's Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt=""></a>
+            <ul class="nav-botton">
+                <li class="li-text"><a href="./index.html">Home</a></li>
+                <li class="li-text"><a href="./about.html">About</a></li>
+                <li class="li-text"><a href="./works.html">Works</a></li>
+            </ul>
+            <div class="social">
+                <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                        alt=""></a>
+                <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                        alt=""></a>
+            </div>
+            <img class="menu" onclick="showSidebar()" src="./images/menu.png" alt="">
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./works.html">Works</a></li>
+                <img class="X_btn" onclick="hideSidebar()" src="./images/X.png" alt="">
+            </ul>
+            </div>
+
+        <div class="banner">
+            <img class="banner-pic" src="./images/banner2.png" alt="">
+        </div>
+
+        <h1 class="midtitle">Introduction</h1>
+
+        <div class="self">
+            <img class="self-pic" src="./images/self-pic.png" alt="">
+            <div class="self-text">
+                <h2>黃浚</h2>
+                <h5>Chun Huang</h5>
+                <p>Hi, I am Chun Huang. Now studying in NTUE Department of Digital Technology Design Master Program in Toy and Game Design.
+                   Major in 3D modeling and UIUX design. Contact me if you have any questions or entrusts.  
+                </p>
+            </div>
+        </div>
+
+        <h1 class="midtitle-works">Works</h1>
+
+
+        <div class="work-pic">
+            <a class="work-pic-1" href="./3d-ruin.html"><img src="./images/card-3d model.png" alt=""></a>
+            <a class="work-pic-2" href="./ui-beauty.html"><img src="./images/card-UIUX.png" alt=""></a>
+            <!-- <a class="work-pic-2" href=""><img src="./images/card-graphic design.png" alt=""></a> -->
+            <!-- <a class="work-pic-2" href=""><img src="./images/card-video.png" alt=""></a> -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>made by aojim 2024</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                    alt=""></a>
+            <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                    alt=""></a>
+        </div>
+    </div>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+</body>
+
+</html>

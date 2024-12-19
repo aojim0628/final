@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Aojim's Website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="./index.html"><img class="logo" src="./images/logo.png" alt=""></a>
+            <ul class="nav-botton">
+                <li class="li-text"><a href="./index.html">Home</a></li>
+                <li class="li-text"><a href="./about.html">About</a></li>
+                <li class="li-text"><a href="./works.html">Works</a></li>
+            </ul>
+            <div class="social">
+                <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                        alt=""></a>
+                <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                        alt=""></a>
+            </div>
+            <img class="menu" onclick="showSidebar()" src="./images/menu.png" alt="">
+        </div>
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./works.html">Works</a></li>
+                <img class="X_btn" onclick="hideSidebar()" src="./images/X.png" alt="">
+            </ul>
+            </div>
+
+        <div class="d-banner">
+            <img class="d-banner1" src="./images/ruin.png" alt="">
+        </div>
+
+        <div class="ruin">
+            <div class="ruin-title">
+                <h1>Ruin</h1>
+            </div>
+            <div class="ruin-intro">
+                <p>這是一個被戰火摧毀的空間。破碎的窗戶讓微弱的陽光滲透進來，照在斑駁的牆壁上，牆
+                    面滿是裂痕與歲月的痕跡。窗外灰暗的天空襯托出遠方的廢墟建築，裸露的樹木顯得荒涼
+                    無生氣。然而，畫面中兩株綠植依然在土壤中堅韌地成長，象徵著希望與生命力，即便在殘破不堪的環境中，也依然有頑強的生命在延續。</p>
+            </div>
+            <h1 class="midtitle">The Idea</h1>
+            <div class="challenge">
+                <div class="challenge1">
+                    <div class="challenge-title1"></div>
+                    <div class="challenge-text">這幅作品旨在探索戰爭帶來的破壞與重生之間的微妙關係。透過殘破的窗戶、斑駁的牆面與荒蕪的背景
+                        ，描繪出戰爭摧毀人類生活的無情一面，呈現出過去的遺跡與傷痕。然而，兩株堅韌生長的綠植成為畫面中的一抹亮點，象徵著希望和生命力，即便在極度惡劣的環境中，生命依然頑強地延續，暗示著即使經歷重創，也能迎來新生的可能性。
+                    </div>
+                </div>
+            </div>
+            <h1 class="midtitle-other3d">Other 3D Modeling Works</h1>
+            <div class="work-pic">
+                <a class="work-pic-2" href="./3d-sci base.html"><img src="./images/card-sci base.png" alt=""></a>
+                <a class="work-pic-2" href="./3d-cyber city.html"><img src="./images/card-cyber city.png" alt=""></a>
+            </div>
+
+            <div class="back"><a href="./works.html">Back to Works</a></div>
+        </div>
+    </div>
+    
+
+
+
+    <div class="footer">
+        <p>made by aojim 2024</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/aojim/" target="_blank"><img class="ig" src="./images/IG.png"
+                    alt=""></a>
+            <a href="https://www.facebook.com/huang.jun.336/" target="_blank"><img class="fb" src="./images/FB.png"
+                    alt=""></a>
+        </div>
+    </div>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
