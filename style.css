@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-image: url("./images/BG.png");
     background-repeat: repeat-y;
@@ -16,6 +20,19 @@ body{
     width: 100%;
     align-items: center;
     /* position: fixed; */
+    opacity: 0;
+    animation: slideRight 1.5s ease-in-out forwards;
+}
+
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .nav li{
@@ -28,19 +45,8 @@ body{
     color: #BD1984;
     font-weight: bold;
     font-size: 20px;
-    text-shadow: 0 0 8px #eaeaea79,0 0 8px #BD1984,0 0 3px #bd19846f,0 0 20px #eb56b7a5;
+    text-shadow: 0 0 4px #9f24afc3,0 0 4px #BD1984,0 0 3px #bd19846f,0 0 10px #eb56b7a5;
 }
-
-/* ul li ul.drop{
-    width: 220px;
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
-
-ul li:hover ul.drop{
-    display: block;
-} */
 
 .nav li a{
     text-decoration: none;
@@ -49,15 +55,10 @@ ul li:hover ul.drop{
     letter-spacing: 4px;
 }
 
-
-
-/* .nav li a:hover{
-    background-color: rgba(211, 211, 211, 0.499);
-} */
-
 .nav-botton{
+    display: flex;
     width: 100%;
-    margin-left: 40%;
+    padding-left: 45%;
 }
 
 .sidebar{
@@ -105,19 +106,24 @@ ul li:hover ul.drop{
     height: 30px;
     margin-right: 40%;
     /* width: 5%; */
-    animation-duration: .4s;
-    animation-name: shake;
+    /* animation-duration: .4s;
+    animation-name: shake; */
 }
-@keyframes shake {
+/* @keyframes shake {
     30% { rotate: 25deg; }
     60% { rotate: -25deg; }
-}
+} */
 
 .social{
     display: flex;
     justify-content: right;
     width: 35%;
+    transition: .5s;
     /* width: 20%; */
+}
+
+.social a :hover{
+    transform: translateY(-10px);
 }
 
 .ig{
@@ -143,6 +149,13 @@ ul li:hover ul.drop{
     margin-top: 40px;
 }
 
+.goup{
+    position: fixed;
+    width: 40px;
+    bottom: 100px; 
+    right: 40px;
+}
+
 .meau button{
     width: 100%;
     background: #ea73ff;
@@ -152,14 +165,33 @@ ul li:hover ul.drop{
 
 .banner-pic{
     width: 100%;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    50%{
+        opacity: .5;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .midtitle{
+    width: 100%;
     font-size: 48px;
     margin-top: 100px;
     text-align: center;
     letter-spacing: 10px;
     color: #BD1984;
+    animation: zommBounce 1.5s ease-in-out;
     /* text-shadow: 0 0 8px #BD1984,0 0 8px #BD1984,0 0 2px #bd1984bd,0 0 48px #eb56b7a5; */
 }
 
@@ -173,11 +205,20 @@ ul li:hover ul.drop{
 
 .midtitle-other3d{
     width: 100%;
+    font-size: 36px;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #22c0d1;
+}
+
+.midtitle-otherui{
+    width: 100%;
     font-size: 48px;
     margin-top: 100px;
     text-align: center;
     letter-spacing: 10px;
-    color: #BD1984;
+    color: #22c0d1;
 }
 
 .self{
@@ -185,6 +226,26 @@ ul li:hover ul.drop{
     width: 80%;
     justify-content: center;
     margin: 0 auto;
+}
+
+.self-pic{
+    opacity: 0;
+    animation: zommBounce 2s ease-in-out forwards;
+    animation-delay: .8s;
+}
+
+@keyframes zommBounce{
+    0%{
+        opacity: 0;
+        transform: scale(0.5) rotate(-40deg);
+    }
+    50%{
+        transform: scale(1.1) rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 .self-text{
@@ -195,6 +256,9 @@ ul li:hover ul.drop{
     margin-left: 120px;
     /* padding-top: 70px; */
     font-weight: lighter;
+    opacity: 0;
+    animation: zommBounce 2s ease-in-out forwards;
+    animation-delay: 1s;
 }
 
 .self-text h2{
@@ -217,25 +281,33 @@ ul li:hover ul.drop{
     margin-top: 30px;
     justify-content: center;
     gap: 40px;
+    animation: works 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
 }
 
-.work-pic-1 :hover{
-    scale: 1.2;
+@keyframes works{
+    0%{
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
-.work-pic-2 :hover{
-    scale: 1.2;
+.work-pic a :hover{
+    scale: 1.1;
 }
 
-.work-pic-1{
+/* .work-pic-1{
     margin-top: 30px;
 }
 
 .work-pic-2{
     margin-top: 30px;
-    /* margin-left: 58px; */
-
-}
+} */
 
 .footer{
     background: rgba(255, 255, 255, 0.058);
@@ -252,6 +324,10 @@ ul li:hover ul.drop{
     position: relative;
 }
 
+.footer p{
+    font-size: 24px;
+}
+
 .footer-social {
     display: none;
     position: absolute;
@@ -263,13 +339,16 @@ ul li:hover ul.drop{
     display: flex;
     justify-content: center;
     color: white;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .banner-about-text{
     margin-top: 130px;
     margin-left: 50px;
+    opacity: 0;
+    animation: zommBounce 2s ease-in-out forwards;
+    animation-delay: .8s;
 }
 
 .name{
@@ -288,6 +367,7 @@ ul li:hover ul.drop{
     /* font-size: 1.5em;  */
     margin-top: 10px;
     margin-left: 20px;
+    vertical-align: bottom;
 }
 
 .university {
@@ -298,55 +378,69 @@ ul li:hover ul.drop{
 }
 
 .content{
-    width: 30%;
+    width: 50%;
     color: white;
     font-size: 16px;
     letter-spacing: 1.5px;
-    line-height: 24px;
+    line-height: 28px;
     margin: 0 auto;
+    animation: works 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
 }
 
 .content-title{
-    border-bottom: 1px solid white;
-    width: 60px;
+    border-bottom: 2px dashed #BD1984;;
+    width: 58px;
     margin-bottom: 14px;
     padding-bottom: 6px;
     font-size: 24px;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .content1{
-    border-bottom: 1px dashed white;
+    border-bottom: 2px solid #BD1984;
     padding-bottom: 10px;
 }
 
 .content2{
-    border-bottom: 1px dashed white;
+    border-bottom: 2px solid #BD1984;
     padding-bottom: 10px;
 }
 
 .content3{
-    border-bottom: 1px dashed white;
+    border-bottom: 2px solid #BD1984;
     padding-bottom: 10px;
 }
 
 .content4{
-    border-bottom: 1px dashed white;
+    border-bottom: 2px solid #BD1984;
     padding-bottom: 10px;
     margin-bottom: 70px;
 }
 
 .goto-works{
+    width: 80px;
     border-radius: 16px;
     background: #BD1984;;
     font-size: 24px;
     padding: 10px;
+    text-align: center;
+} 
+
+.goto-works a{
     text-decoration: none;
     color: white;
-} 
+}
+
+.goto-works:hover{
+    background: #bd1984b5;
+}
 
 .ui-banner{
     text-align: center;
+    /* animation: fadeIn .5s ease-in-out; */
+    animation: zommBounce 1.5s ease-in-out;
 }
 
 .ui-banner1{
@@ -356,6 +450,7 @@ ul li:hover ul.drop{
 .beauty{
     width: 60%;
     margin: 0 auto;
+    animation: works 1.5s ease-in-out;
 }
 
 .beauty-title{
@@ -419,9 +514,14 @@ ul li:hover ul.drop{
     text-align: center;
 }
 
+.beauty-gif img{
+    height: 600px;
+}
+
 .hey{
     width: 60%;
     margin: 0 auto;
+    animation: works 1.5s ease-in-out;
 }
 
 .hey-title{
@@ -437,6 +537,7 @@ ul li:hover ul.drop{
 .musound{
     width: 60%;
     margin: 0 auto;
+    animation: works 1.5s ease-in-out;
 }
 
 .musound-title{
@@ -454,14 +555,19 @@ ul li:hover ul.drop{
 }
 
 .d-banner1{
-    height: 600px;
+    height: 480px;
     margin: 0 auto;
     text-align: center;
+    opacity: 0;
+    animation: fadeIn .5s ease-in-out forwards;
 }
 
 .ruin{
     width: 60%;
     margin: 0 auto;
+    animation: works 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
 }
 
 .ruin-title{
@@ -483,7 +589,8 @@ ul li:hover ul.drop{
 }
 
 .sci-banner1{
-    height: 500px;
+    height: 480px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .back{
@@ -568,22 +675,29 @@ ul li:hover ul.drop{
 
     .work-pic{
         /* display: block; */
-        gap: 4px;
+        /* gap: 20px; */
         text-align: center;
     }
 
     .work-pic img{
-        margin-top: 22px;
         scale: 0.8;
     }
 
-    .work-pic-1 :hover{
-        scale: 1;
+    .work-pic-1{
+        height: 350px;
+    }
+
+    .work-pic a :hover{
+        scale: .9 ;
+    }
+
+    /* .work-pic-1 :hover{
+        scale: .8;
     }
     
     .work-pic-2 :hover{
-        scale: 1;
-    }
+        scale: .8;
+    } */
 
     .menu{
         opacity: 100;
@@ -601,7 +715,7 @@ ul li:hover ul.drop{
     }
 
     .banner-about-text{
-        margin-top: 50px;
+        margin-top: 20px;
         margin-left: 0px;
     }
 
@@ -718,10 +832,14 @@ ul li:hover ul.drop{
 
     .midtitle-other3d{
         font-size: 30px;
-        margin-top: 100px;
-        text-align: center;
         letter-spacing: 4px;
-        color: #BD1984;
+        color: #22c0d1;
+    }
+
+    .midtitle-otherui{
+        font-size: 30px;
+        letter-spacing: 4px;
+        color: #22c0d1;
     }
 
     .sci-banner1{
@@ -776,10 +894,10 @@ ul li:hover ul.drop{
     }
 
     .self-pic{
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-        text-align: center;
+        width: 40%;
+        height: 40%; 
+        margin: 0 auto; 
+        text-align: center; 
         justify-items: center;
     }
 
@@ -805,20 +923,23 @@ ul li:hover ul.drop{
     .work-pic{
         display: block;
         text-align: center;
-
     }
 
     .work-pic img{
         margin-top: 22px;
     }
 
-    .work-pic-1 :hover{
-        scale: 1.1;
+    /* .work-pic-1{ */
+        /* height: 350px; */
+    /* } */
+
+    /* .work-pic-1 :hover{
+        scale: .9;
     }
     
     .work-pic-2 :hover{
-        scale: 1.1;
-    }
+        scale: .9;
+    } */
 
     .menu{
         opacity: 100;
@@ -827,8 +948,12 @@ ul li:hover ul.drop{
     .banner-about{
         display: block;
         text-align: center;
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
+    }
+
+    .name{
+        width: 100%;
     }
 
     .banner-about-text{
@@ -859,6 +984,22 @@ ul li:hover ul.drop{
     .content-title{
         width: 54px;
         font-size: 20px;
+    }
+
+    .content1{
+        font-size: 12px;
+    }
+    
+    .content2{
+        font-size: 12px;
+    }
+    
+    .content3{
+        font-size: 12px;
+    }
+    
+    .content4{
+        font-size: 12px;
     }
     
     .goto-works{
@@ -911,7 +1052,7 @@ ul li:hover ul.drop{
     }
 
     .hey-title{
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .hey-intro{
@@ -949,14 +1090,23 @@ ul li:hover ul.drop{
 
     .midtitle-other3d{
         font-size: 30px;
-        margin-top: 100px;
-        text-align: center;
         letter-spacing: 4px;
-        color: #BD1984;
+        color: #22c0d1;
+    }
+
+    .midtitle-otherui{
+        font-size: 30px;
+        letter-spacing: 4px;
+        color: #22c0d1;
     }
 
     .footer-social {
         display: flex;
+        width: 100px;
+    }
+
+    .footer a{
+        width: 70px;
     }
 }        
 
@@ -965,5 +1115,9 @@ ul li:hover ul.drop{
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer p{
+        font-size: 14px;
     }
 }
